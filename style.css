@@ -1,0 +1,344 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --white-col: #ffff;
+  --btn-col1: cadetblue;
+  --btn-col2: #776d8a;
+  --nav-bg: #4b5d67;
+  --benefits-head: #52575d;
+  --card-col: #e97171;
+}
+
+button {
+  border: none;
+  padding: 2rem 6rem;
+  background-color: var(--btn-col1);
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  color: var(--white-col);
+  cursor: pointer;
+  transition: background-color 0.5s ease-in;
+}
+
+button:hover {
+  background-color: var(--btn-col2);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header & NAV section */
+
+.main-head {
+  background: var(--nav-bg);
+}
+
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+nav h3 {
+  font-size: 2rem;
+  color: var(--white-col);
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  letter-spacing: 0.5rem;
+}
+
+nav ul {
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--white-col);
+  font-size: 1.6rem;
+}
+
+nav ul li a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0rem;
+  border-bottom: 0.2rem solid var(--white-col);
+  transition: width 0.5s ease-in;
+}
+
+nav ul li a:hover::after {
+  width: 3rem;
+}
+
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./img/pic4.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white-col);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 2rem;
+  padding: 2rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* LOCATION SECTION */
+
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./img/pic2.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.locations-head h2 {
+  color: var(--white-col);
+  font-size: 3rem;
+  padding: 4rem 0rem;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.locations-head h3 {
+  font-size: 2rem;
+  text-align: right;
+  color: var(--white-col);
+  line-height: 4rem;
+  font-weight: lighter;
+  /* background: linear-gradient(#000, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+/* .cloud {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)); 
+  position: absolute;
+  top: 0%;
+  right: 0%;
+} */
+
+/* .moving-cloud-1 {
+  animation: cloudAnimation 2s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 8s infinite alternate ease-in-out;
+} */
+
+/* @keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+} */
+
+/* BENEFITS SECTION */
+
+.benefits-head {
+  min-height: 30vh;
+  background-color: var(--benefits-head);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white-col);
+}
+
+.benefits-head h2 {
+  font-size: 3rem;
+}
+
+.benefits-head h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  padding: 2rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  min-height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 30rem;
+  min-height: 40vh;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  margin: 2rem 5rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.card-img {
+  background-color: var(--card-col);
+  border-radius: 1rem;
+}
+
+.card h2 {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+}
+
+.card img {
+  max-width: 15%;
+  margin: 2rem;
+}
+
+/* CONTACT SECTION */
+
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./img/pic3.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.form-wrapper {
+  background-color: #1b262c;
+  width: 60%;
+  border-radius: 2rem;
+  color: var(--white-col);
+}
+
+.form-head {
+  padding: 3rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.name-form,
+.email-form {
+  text-align: center;
+  padding: 3rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.form-wrapper label {
+  font-size: 1.5rem;
+  padding: 0 2rem;
+}
+
+.form-wrapper input {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+/* FOOTER */
+footer {
+  color: var(--white-col);
+  background: var(--nav-bg);
+}
+
+.footer-wrapper {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+
+.footer-wrapper h5 {
+  flex: 1 1 40rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.footer-wrapper ul {
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 940px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  nav h3 {
+    padding: 1rem;
+  }
+}
